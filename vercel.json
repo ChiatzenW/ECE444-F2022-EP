@@ -1,5 +1,15 @@
 {
-    "rewrites": [
-        { "source": "/(.*)", "destination": "/Astar/app" }
+    "version": 2,
+    "builds": [
+        {
+            "src": "./AStar/app.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
     ]
 }
