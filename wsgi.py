@@ -1,3 +1,3 @@
-from AStar.app import app
+from AStar.index import app
 if __name__ == "__main__":
   app.run()
