@@ -1,1 +1,1 @@
-web: gunicorn --chdir AStar app:app
+web: gunicorn --chdir Education_Pathways app:app
