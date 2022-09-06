@@ -4,10 +4,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 import logo from './img/logo.png'
 import { Navbar, Nav } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Switch, Link, useLocation } from "react-router-dom";
-import LogIn from "./LogIn.jsx";
+// import LogIn from "./LogIn.jsx";
 import CourseDescriptionPage from "./CourseDescription";
-import Wishlist from './Wishlist';
-import SignUp from './SignUp'
+// import Wishlist from './Wishlist';
+// import SignUp from './SignUp'
 import SearchResultDisplay from './ResultDisplay'
 
 function CourseDescription (props) {
@@ -51,7 +51,7 @@ export default class NavbarComp extends Component {
             <Navbar.Brand>
               <img src={logo} alt="" />{" "}
               <Nav.Link href="/" style={{ color: "white", display: "inline" }}>
-                A* Course Finder
+                Education Pathways
               </Nav.Link>
             </Navbar.Brand>
 
@@ -62,30 +62,7 @@ export default class NavbarComp extends Component {
                   Search
                 </Nav.Link>
 
-                {this.state.username !== "" &&
-                <Nav.Link as={Link} to="/Wishlist">
-                My Wishlist
-              </Nav.Link>
-
-              }
-
-
-                {/* {this.state.username === "" ?
-                  <Nav.Link as={Link} to="/login">
-                    Login
-                  </Nav.Link>
-                  :
-                  <Nav.Link onClick={this.logOut} as={Link} to="/">
-                    Logout
-                  </Nav.Link>
-                }
-
-
-                {this.state.username === "" &&
-                <Nav.Link as={Link} to="/signup">
-                  Sign Up
-                </Nav.Link>
-                } */}
+                
 
               </Nav>
             </Navbar.Collapse>
@@ -100,20 +77,7 @@ export default class NavbarComp extends Component {
               path="/courseDetails/:code"
               render={props =>(<CourseDescriptionPage {...props} />)}>
             </Route>
-            <Route exact
-              path="/Wishlist"
-              render={props =>(
-                <Wishlist {...props} wishlist={this.state.wishlist_data}/>
-              )}>
-            </Route>
-            <Route exact path="/login"
-                render={props => (
-                  <LogIn {...props} />
-                )}>
-            </Route>
-            <Route path="/signup">
-              <SignUp />
-            </Route>
+            
             <Route path="/">
               <SearchResultDisplay />
             </Route>

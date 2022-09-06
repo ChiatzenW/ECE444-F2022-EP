@@ -96,67 +96,10 @@ class CourseDescriptionPage extends Component {
 
     })
 
-    axios.get(`https://astarchooser.herokuapp.com/user/wishlist?username=${this.state.username}`)
-    .then(res => {
-      console.log(`res is ${res}`)
-      let len = res.data.wishlist.course.length
-      for (let i = 0; i < len; i++) {
-        console.log("checking: ", res.data.wishlist.course[i].code)
-        console.log("course: ", this.props.code)
-        if (res.data.wishlist.course[i].code === this.props.code) {
-          star = starred
-          this.setState({starred: true})
-
-        }
-      }
-    })
-
-
 
     console.log("new state: ", this.state)
   }
 
-  check_star = () => {
-
-    if(this.state.username){
-      if (this.state.starred === false) { //if user is logged in, add to course
-
-        //add course to wishlist
-        console.log("username/code", this.state)
-        axios.post(`https://astarchooser.herokuapp.com/user/wishlist/addCourse?username=${this.state.username}&code=${this.state.course_code}`, {
-          'code': this.state.course_code, 'username':this.state.username
-        })
-        .then(resp =>{
-          if(resp.status === 200){
-            console.log("successfully added course and starred")
-            star = starred;
-            this.setState({starred: true});
-
-          }else{
-            console.log("error occured while modifying wishlist: ", resp.status)
-          }
-        })
-      } else {
-
-        //remove course from wishlist
-        axios.post(`https://astarchooser.herokuapp.com/user/wishlist/removeCourse?username=${this.state.username}&code=${this.state.course_code}`, {
-          'code': this.state.course_code, 'username':this.state.username
-        })
-        .then(resp =>{
-          if(resp.status === 200){
-            console.log("successfully REMOVED course and unstarred")
-            star = empty_star;
-            this.setState({starred: false});
-          }else{
-            console.log("error occured while modifying wishlist: ", resp.status)
-          }
-        })
-      }
-
-    }else{ //else, notify
-      alert("You must login to save a course.")
-    }
-  }
 
   openLink = () => {
     const newWindow = window.open(this.state.syllabus, '_blacnk', 'noopener,noreferrer');

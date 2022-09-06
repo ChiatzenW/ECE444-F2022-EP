@@ -61,7 +61,7 @@ class SearchResultDisplay extends Component{
     return (
       <div className="SearchQuery">
         <div style={{ marginTop: "10%" }}>
-            <h1> A* Course Finder Search - test</h1>
+            <h1> Education Pathways Search</h1>
             <form onSubmit={this.handleSubmit} className={"search"}>
                 <input placeholder={"Search for course code, course name, keyword ..."} className={"text-input"} type="text" value={this.state.input} onChange={this.handleChange} />
                 <input type="submit" value="Submit" className={"submit-button"}/>
