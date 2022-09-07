@@ -83,6 +83,8 @@ export default class NavbarComp extends Component {
             </Route>
           </Switch>
         </div>
+        
+    
       </Router>
     );
   }
