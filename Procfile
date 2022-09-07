@@ -1,1 +1,1 @@
-web: gunicorn --chdir Education_Pathways app:index
+web: gunicorn --chdir Education_Pathways index:app
