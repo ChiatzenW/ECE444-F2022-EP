@@ -2,4 +2,4 @@
 
 Please try our project at:
 
-# https://astarchooser.herokuapp.com
+https://assignment-1-starter-template.herokuapp.com/
