@@ -29,7 +29,7 @@ class Result extends Component{
   }
   
   componentDidMount() {
-    axios.get(`https://astarchooser.herokuapp.com/user/wishlist?username=${this.state.username}`)
+    axios.get(`https://assignment-1-starter-template.herokuapp.com/user/wishlist?username=${this.state.username}`)
     .then(res => {
       let len = res.data.wishlist.course.length
       for (let i = 0; i < len; i++) {
