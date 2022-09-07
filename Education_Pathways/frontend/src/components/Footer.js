@@ -4,13 +4,16 @@ import footer from './img/footer.png';
 const Footer = () => (
   
   <footer className="footer">
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
     {/* {logo} */}
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
+    
+
+   
     <img src={footer} alt=""/>{" "}
    
 

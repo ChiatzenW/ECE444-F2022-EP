@@ -62,6 +62,17 @@ class SearchResultDisplay extends Component{
       <div className="SearchQuery">
         <div style={{ marginTop: "10%" }}>
             <h1> Education Pathways Search</h1>
+            <br></br>
+            <div className = "body_text">
+      Welcome to CARTE's in-development tool for course selection at UofT. Education Pathways allows for more intelligent course searching, by matching not just the terms you search, but ones relevant to them. The more terms you search for, the more relevant your results will be! Even try searching across disciplines for the courses that best cover each.
+
+Whatever year you are looking for, Education Pathways will also suggest courses in earlier years that will best help you to prepare. To get the most out of this, try searching for courses in a later year and see what is suggested for your current one.
+
+We are looking for feedback to improve Education Pathways and make it more useful for students. If you have ideas or suggestions, please  
+<a href = "mailto:alex.olson@utoronto.ca">  email us! </a>
+
+
+      </div>
             <form onSubmit={this.handleSubmit} className={"search"}>
                 <input placeholder={"Search for course code, course name, keyword ..."} className={"text-input"} type="text" value={this.state.input} onChange={this.handleChange} />
                 <input type="submit" value="Submit" className={"submit-button"}/>
@@ -72,16 +83,7 @@ class SearchResultDisplay extends Component{
             {this.state.results}
         </div>
 
-            <div className = "body_text">
-        Welcome to CARTE's in-development tool for course selection at UofT. Education Pathways allows for more intelligent course searching, by matching not just the terms you search, but ones relevant to them. The more terms you search for, the more relevant your results will be! Even try searching across disciplines for the courses that best cover each.
-
-Whatever year you are looking for, Education Pathways will also suggest courses in earlier years that will best help you to prepare. To get the most out of this, try searching for courses in a later year and see what is suggested for your current one.
-
-We are looking for feedback to improve Education Pathways and make it more useful for students. If you have ideas or suggestions, please  
-<a href = "alex.olson@utoronto.ca">  email us! </a>
-
-
-        </div>
+       
       </div>
     );
   }
