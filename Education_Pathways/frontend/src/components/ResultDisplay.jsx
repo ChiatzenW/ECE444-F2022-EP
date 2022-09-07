@@ -68,8 +68,7 @@ class SearchResultDisplay extends Component{
 
 Whatever year you are looking for, Education Pathways will also suggest courses in earlier years that will best help you to prepare. To get the most out of this, try searching for courses in a later year and see what is suggested for your current one.
 
-We are looking for feedback to improve Education Pathways and make it more useful for students. If you have ideas or suggestions, please  
-<a href = "mailto:alex.olson@utoronto.ca">  email us! </a>
+We are looking for feedback to improve Education Pathways and make it more useful for students. If you have ideas or suggestions, please <a href = "mailto:alex.olson@utoronto.ca">  email us! </a>
 
 
       </div>
