@@ -62,10 +62,6 @@ export default class NavbarComp extends Component {
                   Search
                 </Nav.Link>
 
-                {/* <Nav.Link href="/search" style={{ color: "white", display: "inline" }}>
-                  Search
-                </Nav.Link> */}
-
                 
 
               </Nav>
@@ -83,21 +79,10 @@ export default class NavbarComp extends Component {
             </Route>
             
             <Route path="/">
-            <div className = "body_text">
-              
-      Welcome to CARTE's in-development tool for course selection at UofT. Education Pathways allows for more intelligent course searching, by matching not just the terms you search, but ones relevant to them. The more terms you search for, the more relevant your results will be! Even try searching across disciplines for the courses that best cover each.
-
-Whatever year you are looking for, Education Pathways will also suggest courses in earlier years that will best help you to prepare. To get the most out of this, try searching for courses in a later year and see what is suggested for your current one.
-
-We are looking for feedback to improve Education Pathways and make it more useful for students. If you have ideas or suggestions, please <a href = "mailto:alex.olson@utoronto.ca">  email us! </a>
-
-
-      </div>
-              {/* <SearchResultDisplay /> */}
+              <SearchResultDisplay />
             </Route>
           </Switch>
         </div>
-        
         
     
       </Router>
