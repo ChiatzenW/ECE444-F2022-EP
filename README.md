@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## 0. Before the project
 
-    Make you have all the prerequisites installed
+Make you have all the prerequisites installed
 * Git/GitHub Desktop
 * Python (python-3.10.6)
 * nodejs
@@ -35,7 +35,7 @@ $ npm run build
 ```
 ## 4. Deploy the project
    
-    We use Heroku to deploy the project online. To do this, first [sign up](https://signup.heroku.com/) for a Heroku account,  and then install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
+We use Heroku to deploy the project online. To do this, first [sign up](https://signup.heroku.com/) for a Heroku account,  and then install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
 
 
 Next, install a production-grade WSGI web server called [Gunicorn](http://gunicorn.org/):
