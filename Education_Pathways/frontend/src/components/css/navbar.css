@@ -1,6 +1,6 @@
 .navbar {
   width: 100vw;
-  background: #1C3E6F;
+  background: #1c3e6f;
 }
 
 .nav-item a {
@@ -11,10 +11,21 @@
 }
 
 .nav-item a:hover {
-  color: #C4D1E4;
+  color: #c4d1e4;
 }
 
 .navbar-brand img {
   margin-left: 20px;
   max-width: 40px;
+}
+/* make the text go down */
+.body_text {
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  font-size: 150%;
+  margin-left: 40px;
+  margin-right: 50px;
+  margin-top: 170px;
+  margin-bottom: 10px;
+
 }
