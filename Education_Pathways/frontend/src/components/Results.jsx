@@ -29,6 +29,7 @@ class Result extends Component{
   }
   
   componentDidMount() {
+
     axios.get(`${process.env.REACT_APP_API_SERVICE_URL}/user/wishlist?username=${this.state.username}`)
     .then(res => {
       let len = res.data.wishlist.course.length

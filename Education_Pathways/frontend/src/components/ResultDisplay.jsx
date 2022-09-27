@@ -28,6 +28,7 @@ class SearchResultDisplay extends Component{
   }
 
   getData = (input) => {
+    console.log(process.env.REACT_APP_API_SERVICE_URL)
     axios.get(`${process.env.REACT_APP_API_SERVICE_URL}/searchc?input=${input}`)
       .then(res => {
         console.log(`it is ${res.status}`)
