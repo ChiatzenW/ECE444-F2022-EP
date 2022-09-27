@@ -4,6 +4,7 @@ import Result from './Results'
 import './css/Result.css'
 import Label from './Label'
 import "./css/styles.css";
+import API from '../api';
 
 
 class SearchResultDisplay extends Component{
@@ -29,7 +30,7 @@ class SearchResultDisplay extends Component{
 
   getData = (input) => {
     console.log(process.env.REACT_APP_API_SERVICE_URL)
-    axios.get(`${process.env.REACT_APP_API_SERVICE_URL}/searchc?input=${input}`)
+    API.get(`/searchc?input=${input}`)
       .then(res => {
         console.log(`it is ${res.status}`)
         if (res.status === 200) {
