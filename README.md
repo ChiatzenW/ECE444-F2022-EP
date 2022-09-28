@@ -58,10 +58,8 @@ For detailed instructions on Docker, please refer to the documents for Lab3 on Q
 + Change the proxy link in package. Remember to change it back to "http://localhost:5000/"
 ```json
 // Part of Education_Pathways/frontend/package.json
-...
 "private": true,
 "proxy": "http://host.docker.internal:5000/",
-...
 ```
 
 ```powershell
