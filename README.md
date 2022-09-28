@@ -2,7 +2,7 @@
 
 This is a modified version of the previous Assignment1 template.
 
-The deploye version can be found at https://a1-docker.herokuapp.com/.
+The deploye version can be found at https://lab3-docker.herokuapp.com".
 
 ## Changes
 + Remove hardcodes of backend urls.
@@ -14,11 +14,11 @@ The deploye version can be found at https://a1-docker.herokuapp.com/.
 + Enter the repo directory
 + Create a virtual environment if you haven't done this before. Activate it. 
 ```
-# Windows
+#Windows
 py -3 -m venv venv
 venv\Scripts\activate
 
-# For Mac and Linux, please check the link: https://flask.palletsprojects.com/en/2.2.x/installation/
+#For Mac and Linux, please check the link: https://flask.palletsprojects.com/en/2.2.x/installation/
 ```
 + Install dependencies
 ```
@@ -33,7 +33,6 @@ flask --app index --debug run
 ```
 # Education_Pathways/frontend/src/api.js
 export default axios.create({
-// baseURL: "https://[].herokuapp.com/" -- baseURL for deployment
    baseURL: "http://localhost:5000/" -- baseURL for running it locally
 });
 ```
@@ -45,7 +44,6 @@ export default axios.create({
 ...
 ```
 
-```
 + Build and run the frontend:
 ```
 npm run build
@@ -53,28 +51,6 @@ npm start
 ```
 + Then you will see the application at `localhost:3000`
 
-
-## How to run with Docker
-
-Please make sure everything works well before you run it with docker.
-
-+ Make sure the baseURL is set as [URL to your deployed project]
-```
-#Education_Pathways/frontend/src/api.js
-export default axios.create({
-   baseURL: "[URL to your deployed project]" -- baseURL for deployment
-// baseURL: "http://localhost:5000/" -- baseURL for running it locally
-});
-```
-+ Re-build the frontend
-```
-#Under the frontend/ directory
-npm run build
-```
-+ Deploy your changes to heroku
-```
-git push heroku main
-```
 
 ## Build and run with Docker
 
@@ -92,4 +68,25 @@ For detailed instructions on Docker, please refer to the documents for Lab3 on Q
 ```
 #Under the root directory
 docker compose up --build
+```
+
+## How to deploy (not required for lab3)
+
+Please make sure everything works well before you run it with docker.
+
++ Make sure the baseURL is set as [URL to your deployed project]
+```javascript
+#Education_Pathways/frontend/src/api.js
+export default axios.create({
+   baseURL: "[URL to your deployed project]" -- baseURL for deployment
+});
+```
++ Re-build the frontend to update the baseURL
+```
+#Under the frontend/ directory
+npm run build
+```
++ Deploy your changes to heroku
+```
+git push heroku main
 ```
