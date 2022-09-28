@@ -5,8 +5,8 @@ from flask_restful import Api,Resource, reqparse
 from data import search_course_by_code
 import os
 
-import pandas as pd
-df = pd.read_csv("resources/courses.csv", static_folder='frontend/build')
+# import pandas as pd
+# df = pd.read_csv("resources/courses.csv", static_folder='frontend/build')
 
 
 import config
