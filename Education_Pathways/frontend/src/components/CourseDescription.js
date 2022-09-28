@@ -35,8 +35,6 @@ class CourseDescriptionPage extends Component {
 
 
   componentDidMount() {
-    console.log("pass in course code: ", this.props.match.params.code)
-
     API.get(`/course/details?code=${this.props.match.params.code}`, {
       code: this.props.course_code
     })

@@ -100,7 +100,7 @@ We are looking for feedback to improve Education Pathways and make it more usefu
 
       </div> */}
             <form onSubmit={this.handleSubmit} className={"search"}>
-                <input placeholder={"Search for course code, course name, keyword ..."} className={"text-input"} type="text" value={this.state.input} onChange={this.handleChange} />
+                <input placeholder={"Search for course code"} className={"text-input"} type="text" value={this.state.input} onChange={this.handleChange} />
                 <input type="submit" value="Search" className={"submit-button"}/>
             </form>
         </div>

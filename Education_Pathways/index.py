@@ -37,7 +37,7 @@ def search_course_by_code(s):
             '_id': i,
             'code': d['Code'],
             'name': d['Name'],
-            'description': "Course description here.",
+            'description': "The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.",
             'syllabus': "Course syllabus here.",
             'prereq': ['APS101H1, ECE101H1'],
             'coreq': ['APS102H1, ECE102H1'],
