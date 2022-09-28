@@ -2,7 +2,6 @@
 
 from flask import Flask, send_from_directory, jsonify, request
 from flask_restful import Api,Resource, reqparse
-from data import search_course_by_code
 import os
 
 # import pandas as pd
@@ -10,7 +9,7 @@ import os
 
 
 import config
-app = Flask(__name__)
+app = Flask(__name__, static_folder='frontend/build')
 app.config['ENV'] = 'development'
 app.config['DEBUG'] = True
 app.config['TESTING'] = True
