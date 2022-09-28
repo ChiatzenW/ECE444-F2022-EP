@@ -6,7 +6,7 @@ from data import search_course_by_code
 import os
 
 import pandas as pd
-df = pd.read_csv("resources/courses.csv")
+df = pd.read_csv("resources/courses.csv", static_folder='frontend/build')
 
 
 import config
@@ -129,10 +129,10 @@ rest_api.add_resource(ShowCourse, '/course/details')
 @app.route('/<path:path>')
 def serve(path):
     static_folder='frontend/build'
-    if path != "" and os.path.exists(static_folder + '/' + path):
-        return send_from_directory(static_folder, path)
+    if path != "" and os.path.exists(app.static_folder + '/' + path):
+        return send_from_directory(app.static_folder, path)
     else:
-        return send_from_directory(static_folder, 'index.html')
+        return send_from_directory(app.static_folder, 'index.html')
 
 
 
