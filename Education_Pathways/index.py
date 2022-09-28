@@ -5,7 +5,7 @@ from flask_restful import Api,Resource, reqparse
 import os
 
 import pandas as pd
-df = pd.read_csv("resources/courses.csv", static_folder='frontend/build')
+df = pd.read_csv("resources/courses.csv")
 
 
 import config
